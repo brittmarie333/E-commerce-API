@@ -1,7 +1,7 @@
 # E-commerce Web Application :shopping_cart:
 
 ### Project Overview
-This project is an e-commerce web application built using **React**. It allows customers to browse products, place orders, and manage their personal information. Administrators can manage customers, products, and orders. The app is structured into several components and uses a backend API to manage and fetch data.
+This project is an e-commerce web application built using **React**. 
 
 ---
 
