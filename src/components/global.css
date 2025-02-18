@@ -1,0 +1,213 @@
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(to bottom, #b4bfc6, whitesmoke); /* gradient background */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* body takes up the full height */
+}
+
+h1, h2, h3 {
+  color: #4f4b4b;
+}
+
+.container {
+  padding: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+.page-content {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #1da1a1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #de3bcb;
+}
+
+.page-wrapper {
+  padding: 20px;
+}
+
+.page-wrapper h1 {
+  margin-bottom: 40px;
+}
+
+/* navigationBar styling */
+nav {
+  background-color: #4e0467; 
+  padding: 10px 0;  
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+/*navbar brand text has no background or padding */
+.navbar-brand {
+  background: none !important; /* remove background */
+  padding: 0 !important; /* remove padding */
+  color: white !important; /* set text color to white */
+  font-weight: bold;
+  font-size: 1.5rem; 
+  display: inline;
+  margin-left: 0; 
+}
+
+/* remove the default bootstrap styling that might add a background to the navbar brand */
+.navbar-brand:hover {
+  background: none !important; /* remove hover background */
+  color: white !important; /* text stays white on hover */
+}
+
+/* hide navbar toggler on larger screens */
+.navbar-toggler {
+  display: none !important; /* hide toggler on large screens - was experiencing a weird floating block*/
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block !important;  /* show toggler button only on small screens */
+  }
+}
+
+/* style for the navbar links */
+nav .navbar-nav {
+  display: flex;
+  justify-content: center;  /* center the links horizontally */
+}
+
+nav .navbar-nav .nav-item {
+  margin-right: 20px;  /* space between menu items */
+}
+
+nav .navbar-nav .nav-link {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav .navbar-nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+/* style for the navbar buttons */
+nav .btn {
+  background-color: #1da1a1;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+nav .btn:hover {
+  background-color: #de3bcb;
+}
+
+/* responsive navbar: center items on smaller screens */
+@media (max-width: 768px) {
+  nav .navbar-nav {
+    flex-direction: column; /* stack the links vertically on smaller screens */
+    align-items: center;  /* center links in the middle */
+  }
+
+  nav .navbar-nav .nav-item {
+    margin-right: 0;  /* remove right margin for stacked items */
+    margin-bottom: 10px; 
+  }
+
+  nav .btn {
+    width: 100%;  /* buttons take full width on small screens */
+    text-align: center;  /* center the text inside buttons */
+  }
+}
+
+/* general form styling the forms are standard */
+input, select, textarea {
+  padding: 8px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"], button {
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #de3bcb;
+}
+
+/* styling for product card */
+.product-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* limit the card width */
+  margin: 16px;
+}
+
+.product-image {
+  width: 100%; /* image is responsive */
+  height: auto; 
+  max-height: 250px; /* keeps images within my expectations */
+  object-fit: cover; /* image will fill area */
+  border-radius: 8px; /* maintain previous radius */
+}
+
+/* style for view details */
+.view-details-link {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #1da1a1;
+  color: white;
+  border-radius: 5px;
+}
+
+.view-details-link:hover {
+  background-color: #de3bcb;
+}
+
+/* horizontal grid layout for the product page */
+.product-grid {
+  display: flex;
+  flex-wrap: nowrap; /* no wrapping to new lines */
+  overflow-x: auto; /* horizontal scrolling */
+  gap: 16px; /* spacing between cards */
+  padding: 20px;
+}
+
+.product-grid .product-card {
+  flex: 0 0 auto; 
+  min-width: 250px; 
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    flex-direction: column; /* stack items vertically for smaller screens */
+  }
+}
